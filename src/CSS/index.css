@@ -1,8 +1,10 @@
 
+
+/* 
 .hero-section{
-    display: flex;
+    display: flex; */
     /* justify-content: space-between; */
-    align-items: center;
+    /* align-items: center;
     background-color: rgb(225, 225, 235);
 }
 
@@ -14,33 +16,140 @@
 }
 
 .hero-watch-img {
-    width: 350px;
+    max-width: 320px;
     height: auto;
+   
 }
 .hero-section .hero-watch-img{
     padding-left: 9%;
+    max-width: 320px;
+    background-color:rgb(225, 225, 235);
+} */
+
+
+/* Hero Section */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 80px;
 }
+
+/* Left Side */
+.text{
+    flex: 1;
+}
+
+#w-1{
+    color: blue;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.text h1{
+    font-size: 50px;
+    margin: 15px 0;
+}
+
+.text p{
+    font-size: 18px;
+    color: #555;
+    margin: 8px 0;
+}
+
+/* Buttons */
+.btn{
+    padding: 12px 25px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: darkblue;
+}
+
+/* Right Side Image */
+.hero-watch-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-watch-img img{
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+    .hero-section{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .text h1{
+        font-size: 40px;
+    }
+
+    .hero-watch-img img{
+        max-width: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    .text h1{
+        font-size: 32px;
+    }
+
+    .text p{
+        font-size: 16px;
+    }
+
+    .btn{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hero-watch-img img{
+        max-width: 250px;
+    }
+}
+
 
 .featuer-container{
     display: flex;
-    flex-direction: row;
+     flex-wrap: wrap;
     /* gap: 10%; */
     justify-content: space-around;
     background-color: rgb(225, 228, 219);
-    /* color: rgb(57, 70, 70); */
+   padding: 30px;
 }
 
 .featuer-container > div{
-    display: grid; /* Fixed typo */
+     
     grid-template-rows: repeat(5, auto); /* Every card now has 7 rows */
-    row-gap: 15px;
+    
     background-color: #fff;
     border-radius: 8%;
-    border:1px solid black;;
-    max-width: fit-content;
-    max-height: fit-content;
-    margin: 2%;
-    padding: 20px;
+    border:1px solid black;
+    flex: 1 1 280px; 
+    max-width: 320px;
+    
+    display: grid;
+    row-gap: 15px;
+    padding-bottom: 20px;
     
 }
 
@@ -58,10 +167,13 @@
     background-color: #fff;
     border-radius: 8%;
     border:1px solid black;;
-    max-width: fit-content;
-    max-height: fit-content;
-    margin: 2%;
+    
+    
+    
     padding: 20px;
+
+    flex: 1 1 280px; 
+    max-width: 320px;
 }
 
 
@@ -80,9 +192,9 @@
     background-color: #fff;
     border-radius: 8%;
     border:1px solid black;;
-    max-width: fit-content;
-    max-height: fit-content;
-    margin: 2%;
+    max-width: 320px;
+    
+    flex: 1 1 280px;
     padding: 20px;
 }
 
@@ -94,4 +206,36 @@
     padding-bottom: 2%;
     /* align-items: center; */
 
+}
+
+
+@media (max-width: 480px) {
+
+    .featuer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featuer-container > div {
+        width: 90%;
+        max-width: 350px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .featuer-container {
+        gap: 15px;
+    }
+
+    .featuer-container > div {
+        flex: 1 1 45%;
+    }
+
+}
+
+body{
+    margin-right: 0%;
 }
