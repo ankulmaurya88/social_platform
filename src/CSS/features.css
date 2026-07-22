@@ -1,0 +1,94 @@
+/* Hero Section Custom Styles */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Feature Container Wrapper */
+.features-main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+/* CSS Grid Module For Feature Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Standard Feature Content Box Item Structure */
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Visual Priority Variant for the 5th Element Layout Oddity */
+.highlighted-card {
+    border-left: 4px solid #38bdf8; /* Distinct tech cyan highlighting strip */
+}
+
+/* Responsive Adaptive Viewports for Smaller Screens */
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 50px 15px;
+    }
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    .features-main-container {
+        margin: 40px auto;
+    }
+    .feature-card {
+        padding: 25px;
+    }
+}

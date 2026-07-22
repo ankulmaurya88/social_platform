@@ -1,0 +1,128 @@
+/* Hero Header Design matching global dark theme */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Master Reviews Grid Container */
+.reviews-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+/* Base Card Styles */
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.07);
+}
+
+/* Top Header Area Content Inside Cards */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    font-size: 26px;
+    background-color: #f1f5f9;
+    padding: 6px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info h4 {
+    font-size: 16px;
+    color: #0f172a;
+    font-weight: 600;
+    margin: 0;
+}
+
+.verified-tag {
+    font-size: 11px;
+    color: #10b981; /* Green color for checked tags */
+    font-weight: 500;
+    display: block;
+    margin-top: 2px;
+}
+
+.star-rating {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Card Body Text Typography */
+.review-text {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive Rules for Small Handheld Screens */
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 50px 15px;
+    }
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    .reviews-container {
+        margin: 40px auto;
+        gap: 20px;
+    }
+    .review-card {
+        padding: 20px;
+    }
+    .review-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,177 @@
+/* Hero Header Design matching global theme */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Master Pricing Display Flex System */
+.price-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: -40px auto 80px auto; /* Pulls cards slightly upwards into the hero banner */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* Base Price Card Styles */
+.price-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured 'Pro Plan' Custom Accentuation styles */
+.highlighted-plan {
+    border: 2px solid #38bdf8;
+    transform: scale(1.03);
+}
+
+.highlighted-plan:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Card Typography Typography rules */
+.price-card h3 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.plan-price {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plan-price span {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Features List Styles */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+    flex-grow: 1; /* Pushes the button to the bottom if list content heights differ */
+}
+
+.plan-features li {
+    font-size: 15px;
+    color: #475569;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.check {
+    color: #10b981; /* Green checkmark element styling */
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+/* Action Button Core Styles */
+.btn {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+/* Primary Button State overrides for Pro Card */
+.btn-primary {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1e293b;
+}
+
+/* Responsive Structural Breakpoints for Tablet & Small Screens */
+@media (max-width: 950px) {
+    .price-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        gap: 40px;
+    }
+    .price-card {
+        max-width: 450px;
+    }
+    .highlighted-plan {
+        transform: scale(1);
+    }
+    .highlighted-plan:hover {
+        transform: translateY(-5px);
+    }
+}
