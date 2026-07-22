@@ -6,7 +6,7 @@ on:
       - main  # Trigger pipeline when code is pushed to the main branch
 
 jobs:
-  build-and-push-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       # 1. Checkout the source code from GitHub
@@ -22,10 +22,9 @@ jobs:
 
       # 3. Build and push the image to Docker Hub
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v6 # Updated to the latest stable action version
+        uses: docker/build-push-action@v5 # Updated to the latest stable action version
         with:
           context: .
-          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/smartwatch-site:latest
 
